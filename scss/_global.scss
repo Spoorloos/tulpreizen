@@ -1,0 +1,39 @@
+@use "sass:color";
+
+// Globals
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-padding-top: $header-height;
+    scroll-behavior: smooth;
+    overscroll-behavior: none;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: system-ui, sans-serif;
+    color: white;
+}
+
+a {
+    text-decoration: unset;
+    color: unset;
+}
+
+// Classes
+.cta-1 {
+    cursor: pointer;
+    background-color: $accent-color;
+    border: 0.1rem solid color.adjust($accent-color, $lightness: -7%);
+    border-radius: 0.5rem;
+    transition: background-color 0.2s;
+
+    &:hover {
+        background-color: color.adjust($accent-color, $lightness: -5%);
+    }
+}
