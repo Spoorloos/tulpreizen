@@ -39,40 +39,40 @@
         padding: 0.75rem;
     }
 
-    &__menu {
+    &__menu-btn {
+        appearance: none;
         display: none;
-        height: 100%;
-        aspect-ratio: 1/1;
-        position: relative;
-
-        &__check {
-            position: absolute;
-            inset: 0;
-            opacity: 0;
-            cursor: pointer;
-        }
-
-        &__hamburger {
-            width: 100%;
-            height: 100%;
-        }
+        width: 5rem;
+        height: 5rem;
+        cursor: pointer;
+        background-image: url("../assets/hamburger.svg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
     }
 
-    @at-root :root:has(&__menu__check:checked) &__nav {
-        display: flex;
-        flex-direction: column;
-        position: fixed;
-        inset: 100% 0 auto 0;
-        background-color: rgba($main-color, 0.9);
-        padding: 1rem;
+    @at-root :root:has(&__menu-btn:checked) & {
+        &__nav {
+            display: flex;
+            flex-direction: column;
+            position: fixed;
+            inset: 100% 0 auto 0;
+            background-color: rgba($main-color, 0.9);
+            padding: 1rem;
 
-        &__item:hover, &__item:focus {
-            transform: none
+            &__item:hover, &__item:focus {
+                transform: none
+            }
+        }
+
+        &__menu-btn {
+            background-image: url("../assets/close.svg");
+            background-size: 75%;
         }
     }
 
     @media screen and (max-width: 600px) {
         &__nav, &__book-cta { display: none; }
-        &__menu { display: unset; }
+        &__menu-btn { display: block; }
     }
 }
