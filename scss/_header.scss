@@ -51,7 +51,7 @@
         background-repeat: no-repeat;
     }
 
-    @at-root :root:has(&__menu-btn:checked) & {
+    &:has(&__menu-btn:checked) & {
         &__nav {
             display: flex;
             flex-direction: column;
@@ -73,6 +73,6 @@
 
     @media screen and (max-width: 600px) {
         &__nav, &__book-cta { display: none; }
-        &__menu-btn { display: block; }
+        &__menu-btn { display: unset; }
     }
 }
