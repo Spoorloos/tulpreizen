@@ -14,6 +14,11 @@
     &__logo {
         height: 100%;
         aspect-ratio: 1/1;
+
+        &__img {
+            width: 100%;
+            height: 100%;
+        }
     }
 
     &__nav {
@@ -51,7 +56,7 @@
         background-repeat: no-repeat;
     }
 
-    &:has(&__menu-btn:checked) & {
+    @at-root body:has(&__menu-btn:checked) & {
         &__nav {
             display: flex;
             flex-direction: column;
