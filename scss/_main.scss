@@ -24,10 +24,10 @@
             align-items: center;
             gap: 1rem;
             padding: 2rem;
-            overflow: hidden;
+            text-align: center;
 
             &__title {
-                font-size: 7rem;
+                font-size: min(20vw, 7rem);
             }
 
             &__logo {
