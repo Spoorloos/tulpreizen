@@ -126,28 +126,17 @@
 
     &__gallery {
         padding-top: 3rem;
-    }
 
-    &__gallery__images {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        list-style-type: none;
-
-        @media screen and (max-width: 900px) {
-            grid-template-columns: repeat(3, 1fr);
-        }
-
-        @media screen and (max-width: 650px) {
-            grid-template-columns: repeat(2, 1fr);
-        }
-
-        @media screen and (max-width: 450px) {
-            grid-template-columns: 1fr;
+        &__images {
+            width: 100%;
+            list-style-type: none;
+            columns: 4 25rem;
+            column-gap: 0;
         }
     }
 
-    &__gallery-image {
-        & > img {
+    &__gallery-item {
+        &__image {
             width: 100%;
             aspect-ratio: 1/1;
             display: block;
